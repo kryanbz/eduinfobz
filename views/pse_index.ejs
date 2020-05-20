@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<title>EDUinfoBZ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right">EDUinfoBZ</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:280px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="/images/edubzinfo.png" class="w3-circle w3-margin-right" style="width:80px">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <span>Use the Dashboard below to select the test you are intereted in: </span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Dashboard</h5>
+  </div>
+  
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="http://localhost:3000/" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  BJAT</a>
+    <a href="http://localhost:3000/pse_index" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  PSE</a>
+    <a href="http://localhost:3000/atlib_index"" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  ATLIB</a>
+    <a href="http://localhost:3000/books/" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i>  ADD RECORDS</a>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:25px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:18px">
+    <h5><b><i class="fa fa-dashboard"></i> My EDUinfoBZ Dashboard</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>BJAT</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-left"><i class="fa fa-eye w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>SELECTED</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>PSE</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"><i class="fa fa-share-alt w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>ATLIB</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3></h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>ADD RECORDS</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third">
+        <h5>BELIZE</h5>
+        <img src="/images/belize.gif" style="width:80%" alt="Map of Belize">
+      </div>
+      <div class="w3-twothird">
+	    <h5><b>PSE: </b>AVERAGES AND SCHOOL RANKINGS BY DISTRICTS </h5>
+        <table class="w3-table w3-striped w3-white">
+          <tr>
+            <td><i class="fa fa-users w3-text-blue w3-large"></i></td>
+            <td>ALL DISTRICTS</td>
+            <td><a href="http://localhost:3000/pse/" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+						
+          </tr>
+          <tr>
+            <td><i class="fa fa-user w3-text-red w3-large"></i></td>
+            <td>Belize District</td>
+            <td><a href="http://localhost:3000/pse/belize" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-user w3-text-yellow w3-large"></i></td>
+            <td>Cayo District</td>
+            <td><a href="http://localhost:3000/pse/cayo" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-user w3-text-red w3-large"></i></td>
+            <td>Corozal</td>
+            <td><a href="http://localhost:3000/pse/corozal" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+            <td>Orange Walk</td>
+            <td><a href="http://localhost:3000/pse/orangewalk" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-user w3-text-red w3-large"></i></td>
+            <td>Stann Creek</td>
+            <td><a href="http://localhost:3000/pse/stanncreek" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-user w3-text-green w3-large"></i></td>
+            <td>Toledo</td>
+            <td><a href="http://localhost:3000/pse/toledo" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container">
+    <h5>PSE - RANKINGS BY:</h5>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+      <tr>
+        <td>MANAGEMENT</td>
+        <td><a href="http://localhost:3000/pse/management" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+      </tr>
+      <tr>
+        <td>FUNDING</td>
+       <td><a href="http://localhost:3000/pse/funding" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+      </tr>
+      <tr>
+        <td>MUNICIPALITY</td>
+        <td><a href="http://localhost:3000/pse/municipality" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+      </tr>
+      <tr>
+        <td>URBAN/RURAL</td>
+        <td><a href="http://localhost:3000/pse/ur" class="w3-button w3-dark-grey">  Select <i class="fa fa-arrow-right"></i></a></td>
+      </tr>
+            
+    </table><br>
+   
+  </div>
+<hr>
+
+ 
+  <br>
+  <div class="w3-container w3-dark-grey w3-padding-32">
+    <div class="w3-row">
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-green">BJAT</h5>
+        <p>The Belize Junior Achievement Test (BJAT) is meant for all pupils in the sixth grade or in standard three. It is a paper-based exam.</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-red">PSE</h5>
+        <p>The Primary School Examinations (PSE) is meant for students in the eighth grade and is a final school leaving examination. It is a paper-based examination and questions in the exam are based on the contents included in the national primary school curriculum.  Following competencies are assessed: Math, English language, social studies and science.</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-orange">ATLIB</h5>
+        <p>Association of Tertiary Level Institutions of Belize. The ATLIB was set up in 1989 and is a voluntary organization for all recognized higher education institutions functioning in Belize. It addresses the matters related to the higher education in Belize. The ATLIB prepares examinations for high school students who want to take admittance into the higher education institutions in Belize.
+</p>
+       
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey">
+    <h4>UNIVERSITY OF BELIZE</h4>
+    <p>Powered by <a href="https://UB.EDU.BZ" target="_blank">CMPS1171</a></p>
+  </footer>
+
+  <!-- End page content -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
